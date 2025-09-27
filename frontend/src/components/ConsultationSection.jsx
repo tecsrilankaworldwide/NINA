@@ -140,12 +140,17 @@ const ConsultationSection = () => {
                 <div>
                   <Label htmlFor="age_group">Child's Age Group *</Label>
                   <Select value={formData.child_age_group} onValueChange={(value) => handleInputChange('child_age_group', value)}>
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className="mt-1" data-testid="age-group-select">
                       <SelectValue placeholder="Select Excellence Program" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="z-50" data-testid="age-group-options">
                       {ageGroups.map((group) => (
-                        <SelectItem key={group.value} value={group.value}>
+                        <SelectItem 
+                          key={group.value} 
+                          value={group.value}
+                          data-testid={`age-group-option-${group.value}`}
+                          className="cursor-pointer hover:bg-gray-100"
+                        >
                           {group.label}
                         </SelectItem>
                       ))}
