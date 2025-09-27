@@ -1,0 +1,254 @@
+{
+  "timestamp": "2025-09-27T12:50:16.636669",
+  "total_tests": 8,
+  "passed_tests": 8,
+  "success_rate": "100.0%",
+  "overall_success": true,
+  "test_details": [
+    {
+      "test_name": "API Root",
+      "method": "GET",
+      "endpoint": "",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "message": "TecaiKids API - Empowering Future Leaders"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Get All Programs",
+      "method": "GET",
+      "endpoint": "programs",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": [
+        {
+          "id": "630f4539-163b-46be-bc8c-89e4261929a5",
+          "name": "Little Learners Foundation",
+          "age_range": "Ages 4-6",
+          "description": "Foundation Excellence",
+          "monthly_price": 800,
+          "quarterly_price": 2800,
+          "features": [
+            "Advanced Number & Letter Mastery",
+            "Interactive Color & Shape Theory",
+            "Foundation Logical Thinking",
+            "Gamified Learning Adventures",
+            "Expert Parent Coaching",
+            "Premium Physical Workbooks",
+            "Progress Analytics Dashboard"
+          ],
+          "program_type": "little_learners"
+        },
+        {
+          "id": "0afa20a5-5f6e-443e-9254-2f870ce7ccc2",
+          "name": "Young Explorers Discovery",
+          "age_range": "Ages 7-9",
+          "description": "Discovery Excellence",
+          "monthly_price": 1200,
+          "quarterly_price": 4200,
+          "features": [
+            "Advanced Mathematics & Statistics",
+            "Virtual Science Laboratory",
+            "Critical Reading & Analysis",
+            "Intermediate Logical Thinking",
+            "Digital Art & Design",
+            "AI-Powered Progress Tracking",
+            "Peer Learning Networks"
+          ],
+          "program_type": "young_explorers"
+        },
+        {
+          "id": "2393fcec-09b0-4334-99a7-9494a2fbb81d",
+          "name": "Smart Kids Mastery",
+          "age_range": "Ages 10-12",
+          "description": "Mastery Excellence",
+          "monthly_price": 1500,
+          "quarterly_price": 5250,
+          "features": [
+            "Higher Mathematics & Calculus Prep",
+            "Professional Coding Fundamentals",
+            "Real-World STEM Projects",
+            "Advanced Logical Reasoning",
+            "Algorithmic Thinking Mastery",
+            "Critical Problem-Solving",
+            "Mentor-Guided Learning"
+          ],
+          "program_type": "smart_kids"
+        },
+        {
+          "id": "5d4f36e7-f6a0-4eff-8d02-728d364015f8",
+          "name": "Tech Teens Professional",
+          "age_range": "Ages 13-15",
+          "description": "Professional Excellence",
+          "monthly_price": 2000,
+          "quarterly_price": 7000,
+          "features": [
+            "Professional Programming Languages",
+            "Full-Stack Web Development",
+            "Mobile App Development",
+            "Advanced Algorithmic Design",
+            "Industry-Level Projects",
+            "Tech Career Preparation",
+            "1-on-1 Industry Mentorship"
+          ],
+          "program_type": "tech_teens"
+        },
+        {
+          "id": "ffd3f589-d3c9-4aca-b254-32c12396c026",
+          "name": "Future Leaders Mastery",
+          "age_range": "Ages 16-18",
+          "description": "Leadership Excellence",
+          "monthly_price": 2500,
+          "quarterly_price": 8750,
+          "features": [
+            "AI & Machine Learning Mastery",
+            "Enterprise App Development",
+            "Advanced Data Science",
+            "Complex Algorithmic Systems",
+            "Leadership & Entrepreneurship",
+            "Global Career Preparation",
+            "Executive Mentorship Program"
+          ],
+          "program_type": "future_leaders"
+        }
+      ],
+      "error": null
+    },
+    {
+      "test_name": "Get Specific Program",
+      "method": "GET",
+      "endpoint": "programs/smart_kids",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "id": "b309b99c-cf35-4eb0-9662-dd121b26fe54",
+        "name": "Smart Kids Mastery",
+        "age_range": "Ages 10-12",
+        "description": "Mastery Excellence",
+        "monthly_price": 1500,
+        "quarterly_price": 5250,
+        "features": [
+          "Higher Mathematics & Calculus Prep",
+          "Professional Coding Fundamentals",
+          "Real-World STEM Projects",
+          "Advanced Logical Reasoning",
+          "Algorithmic Thinking Mastery",
+          "Critical Problem-Solving",
+          "Mentor-Guided Learning"
+        ],
+        "program_type": "smart_kids"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Get Platform Stats",
+      "method": "GET",
+      "endpoint": "stats",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "total_students": 10000,
+        "success_rate": "99%",
+        "expert_educators": 25,
+        "support_hours": "24/7",
+        "total_enrollments": 0,
+        "total_consultations": 0
+      },
+      "error": null
+    },
+    {
+      "test_name": "Create Enrollment",
+      "method": "POST",
+      "endpoint": "enrollment",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "id": "a7c9b3e6-d11f-475f-865b-c812c3dc0d7b",
+        "student_full_name": "Test Student",
+        "parent_guardian_name": "Test Parent",
+        "email": "test@example.com",
+        "phone": "+94771234567",
+        "address": "123 Test Street, Colombo, Sri Lanka",
+        "program_type": "smart_kids",
+        "payment_plan": "monthly",
+        "payment_method": "card",
+        "amount": 1500,
+        "enrollment_date": "2025-09-27T12:50:13.356959",
+        "status": "pending"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Get All Enrollments",
+      "method": "GET",
+      "endpoint": "enrollments",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": [
+        {
+          "id": "a7c9b3e6-d11f-475f-865b-c812c3dc0d7b",
+          "student_full_name": "Test Student",
+          "parent_guardian_name": "Test Parent",
+          "email": "test@example.com",
+          "phone": "+94771234567",
+          "address": "123 Test Street, Colombo, Sri Lanka",
+          "program_type": "smart_kids",
+          "payment_plan": "monthly",
+          "payment_method": "card",
+          "amount": 1500,
+          "enrollment_date": "2025-09-27T12:50:13.356000",
+          "status": "pending"
+        }
+      ],
+      "error": null
+    },
+    {
+      "test_name": "Create Consultation Request",
+      "method": "POST",
+      "endpoint": "consultation",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "id": "06b95a61-54ea-4a1b-b4c7-376035126ed5",
+        "full_name": "Test Parent",
+        "email": "parent@example.com",
+        "phone": "+94771234567",
+        "child_age_group": "young_explorers",
+        "learning_goals": "I want my child to develop strong logical thinking and coding skills for future career opportunities.",
+        "request_date": "2025-09-27T12:50:16.202288",
+        "status": "pending"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Get All Consultation Requests",
+      "method": "GET",
+      "endpoint": "consultations",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": [
+        {
+          "id": "06b95a61-54ea-4a1b-b4c7-376035126ed5",
+          "full_name": "Test Parent",
+          "email": "parent@example.com",
+          "phone": "+94771234567",
+          "child_age_group": "young_explorers",
+          "learning_goals": "I want my child to develop strong logical thinking and coding skills for future career opportunities.",
+          "request_date": "2025-09-27T12:50:16.202000",
+          "status": "pending"
+        }
+      ],
+      "error": null
+    }
+  ]
+}
