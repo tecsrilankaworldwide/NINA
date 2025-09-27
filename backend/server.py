@@ -288,6 +288,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+@app.on_event("startup")
+async def startup_event():
+    logger.info("TecaiKids API starting up...")
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+    logger.info("TecaiKids API shutting down...")
